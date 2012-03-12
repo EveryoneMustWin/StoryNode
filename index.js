@@ -3,9 +3,7 @@ var router = require("./router");
 var requestHandlers = require("./requestHandlers");
 var story = require("./StoryNode");
 
-var node = story.startStory("aaa");
-
-console.log("[root] " + node.text);
+var node = story.startStory();
 
 for (var t in node)
 {
@@ -14,8 +12,15 @@ for (var t in node)
 
 var handle = {}
 handle["/"] = requestHandlers.start;
-handle["/start"] = requestHandlers.start;
-handle["/upload"] = requestHandlers.upload;
+handle["/viewnode"] = requestHandlers.viewnode;
+handle["/newnode"] = requestHandlers.newnode;
 handle["/data"] = requestHandlers.data;
 
-server.start(router.route, handle);
+
+var hash = {1 : node};
+hash[2]=node[1];
+hash[3]=node[2];
+hash[4]=node[3];
+hash[5]=node[4];
+
+server.start(router.route, handle, node, hash);
