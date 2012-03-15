@@ -8,7 +8,7 @@ function viewnode(response, id, slot, hash, postData) {
     
     if (id === undefined)
     {
-      console.log("Probably you want root node")
+      console.log("serving the root node in the case of an undefined id")
       id = 1;
     }
 

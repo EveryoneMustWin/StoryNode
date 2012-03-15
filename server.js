@@ -12,7 +12,7 @@ function start(route, handle, hash) {
     var slot = qs["slot"];
 
     request.setEncoding("utf8");
-    
+
     var postData = "";
 
     request.addListener("data", function(postDataChunk) 
@@ -24,7 +24,7 @@ function start(route, handle, hash) {
     request.addListener("end", function() 
     {
       var ps = querystring.parse(postData);
-    	
+
       console.log("end listener called postData " + postData + " ps " + ps);
       route(handle, pathname, response, id, slot, hash, ps);
     });
