@@ -11,7 +11,7 @@ for (var t in node)
 }
 
 var handle = {}
-handle["/"] = requestHandlers.start;
+handle["/"] = requestHandlers.viewnode;
 handle["/viewnode"] = requestHandlers.viewnode;
 handle["/newnode"] = requestHandlers.newnode;
 handle["/data"] = requestHandlers.data;
