@@ -22,5 +22,8 @@ hash[2]=node[1];
 hash[3]=node[2];
 hash[4]=node[3];
 hash[5]=node[4];
+hash[6]=node[1][1];
+hash[7]=node[1][2];
+hash['last']=8;
 
-server.start(router.route, handle, node, hash);
+server.start(router.route, handle, hash);

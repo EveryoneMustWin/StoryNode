@@ -18,6 +18,6 @@ function startStory() {
   return rootNode;
 }
 
-// exports.StoryNode = StoryNode;
+exports.StoryNode = StoryNode;
 exports.startStory = startStory;
 
