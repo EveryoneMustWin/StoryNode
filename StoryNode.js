@@ -1,7 +1,16 @@
 
 function StoryNode(t, i) {
-  this.text = t;
-  this.uid = i;
+	
+  if (this instanceof StoryNode)
+  {
+    this.text = t;
+    this.uid = i;
+  }
+  else
+  {
+  	console.log("ERROR: StoryNode called without new");
+  	return new StoryNode(t, i);
+  }
 }
 
 function startStory() {
